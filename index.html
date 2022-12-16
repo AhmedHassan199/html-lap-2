@@ -13,7 +13,7 @@
    
         <script>
          function getLocation(){
-        navigator.geolocation.getCurrentPosition(showPosition,showError,Options);
+        navigator.geolocation.getCurrentPosition(showPosition);
       }
       function showPosition(e){
         console.log(e);
@@ -24,28 +24,7 @@
         location.assign("http://maps.google.com/maps?q=" + lat +
         ",+" + long)
         }
-        function showError(x){
-            console.log(x)
-            console.log(x.message)
-        switch(x.code){
-          case 0:
-            console.log(x.message);
-            break;
-            case 1:
-            console.log(x.message);
-            break;
-            case 2:
-            console.log(x.message);
-            break;
-            case 3:
-            console.log(x.message,x.code);
-            break;
-        }
-
-      }
-      var Options={
-        timeout:0
-      }
+        
 // ---------------------------------------------------------------------------------
 
     // ---------------------------------------------------------------------------------
